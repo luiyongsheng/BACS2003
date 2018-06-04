@@ -15,8 +15,8 @@ def distance(p1,p2):
 
 timestamp = time.time()
 for x in range(0,10):
-    rw = randint(1,w)
-    rh = randint(1,h)
+    rw = randint(0,w-1)
+    rh = randint(0,h-1)
     coordinatesList.append((rw,rh))
     print(coordinatesList[x])
     totalDistance += distance(coordinatesList[x-1], coordinatesList[x])
@@ -24,6 +24,6 @@ for x in range(0,10):
 
 timestamp = time.time() - timestamp
 
-print('\nTotal distance travelled : ', totalDistance)
-print('Time taken: ',timestamp)
-print('Average speed: ', totalDistance / timestamp)
+print'\nTotal distance travelled : ', totalDistance
+print 'Time taken: ',timestamp
+print 'Average speed: ', totalDistance / timestamp
